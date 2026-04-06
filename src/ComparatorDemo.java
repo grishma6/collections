@@ -31,8 +31,7 @@ class Student{
     public String getName(){
         return name;
     }
-
-    public double getgpa(){
+    public double getGpa(){
         return gpa;
     }
 }
@@ -62,9 +61,9 @@ public class ComparatorDemo {
         students.add(new Student("Grish", 3.9));
 
         students.sort((a,b) -> {
-            if((a.getgpa() - b.getgpa()) > 0){ //a>b
+            if((a.getGpa() - b.getGpa()) > 0){ //a>b
             return -1;
-            }else if((b.getgpa() - a.getgpa()) < 0){//a<b
+            }else if((b.getGpa() - a.getGpa()) < 0){//a<b
             return 1;
             }else{
             return 0;
@@ -72,7 +71,7 @@ public class ComparatorDemo {
         });
 
         for(Student student : students){
-            System.out.println(student.getName() + ":" + student.getgpa());
+            System.out.println(student.getName() + ":" + student.getGpa());
         }
     }
 }
